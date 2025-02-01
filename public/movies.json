@@ -1,0 +1,198 @@
+[
+    {
+        "id": "1",
+        "movieName": "Harry Potter and the Sorcerer's Stone",
+        "director": "Chris Columbus",
+        "directorimg": "/Images/chris_columbus.jpg",
+        "poster": "/public/images/movie1.jpg",
+        "review": 
+        "The magical journey begins as Harry discovers he's a wizard and embarks on an adventure filled with wonder, danger, and friendship at Hogwarts School of Witchcraft and Wizardry.",
+        "duration": "2h 32m",
+        "rating": 4.7,
+        "genre": "Fantasy",
+        "tags": ["Magic", "Adventure", "Family"],
+        "production": "Warner Bros.",
+        "yearOfRelease": 2001
+    },
+    {
+        "id": "2",
+        "movieName": "Harry Potter and the Chamber of Secrets",
+        "director": "Chris Columbus",
+        "directorimg": "/Images/chris_columbus.jpg",
+        "poster": "/public/images/movie2.jpg",
+        "review": 
+        "Harry returns to Hogwarts for his second year, only to find the school plagued by a series of mysterious attacks connected to the legend of the Chamber of Secrets.",
+        "duration": "2h 41m",
+        "rating": 4.6,
+        "genre": "Fantasy",
+        "tags": ["Mystery", "Adventure"],
+        "production": "Warner Bros.",
+        "yearOfRelease": 2002
+    },
+    {
+        "id": "3",
+        "movieName": "Iron Man",
+        "director": "Jon Favreau",
+        "directorimg": "/Images/jon_favreau.jpg",
+        "poster": "/public/images/movie3.jpg",
+        "review": 
+        "The movie that launched the Marvel Cinematic Universe, following Tony Stark as he transforms from billionaire playboy to the armored superhero Iron Man.",
+        "duration": "2h 6m",
+        "rating": 4.8,
+        "genre": "Action",
+        "tags": ["Superhero", "Sci-Fi", "Adventure"],
+        "production": "Marvel Studios",
+        "yearOfRelease": 2008
+    },
+    {
+        "id": "4",
+        "movieName": "The Avengers",
+        "director": "Joss Whedon",
+        "directorimg": "/Images/joss_whedon.jpg",
+        "poster": "/public/images/movie4.jpg",
+        "review": 
+        "Earth's mightiest heroes unite to stop Loki and his alien army in this action-packed superhero ensemble that redefined the genre.",
+        "duration": "2h 23m",
+        "rating": 4.9,
+        "genre": "Action",
+        "tags": ["Superhero", "Team-up", "Adventure"],
+        "production": "Marvel Studios",
+        "yearOfRelease": 2012
+    },
+    {
+        "id": "5",
+        "movieName": "Harry Potter and the Prisoner of Azkaban",
+        "director": "Alfonso Cuarón",
+        "directorimg": "/Images/alfonso_cuaron.jpg",
+        "poster": "/public/images/movie5.jpg",
+        "review": 
+        "In his third year at Hogwarts, Harry uncovers the truth about Sirius Black and the dark secrets of his family's past.",
+        "duration": "2h 22m",
+        "rating": 4.8,
+        "genre": "Fantasy",
+        "tags": ["Adventure", "Time Travel"],
+        "production": "Warner Bros.",
+        "yearOfRelease": 2004
+    },
+    {
+        "id": "6",
+        "movieName": "Avengers: Endgame",
+        "director": "Anthony and Joe Russo",
+        "directorimg": "/Images/russo_brothers.jpg",
+        "poster": "/public/images/movie6.jpg",
+        "review": 
+        "The epic conclusion to the Infinity Saga, as the Avengers assemble one last time to undo the devastation caused by Thanos.",
+        "duration": "3h 2m",
+        "rating": 4.9,
+        "genre": "Action",
+        "tags": ["Superhero", "Epic", "Time Travel"],
+        "production": "Marvel Studios",
+        "yearOfRelease": 2019
+    },
+    {
+        "id": "7",
+        "movieName": "Harry Potter and the Goblet of Fire",
+        "director": "Mike Newell",
+        "directorimg": "/Images/mike_newell.jpg",
+        "poster": "/public/images/movie7.jpg",
+        "review": 
+        "Harry is unexpectedly entered into the dangerous Triwizard Tournament, where he must face life-threatening challenges and a terrifying resurrection.",
+        "duration": "2h 37m",
+        "rating": 4.7,
+        "genre": "Fantasy",
+        "tags": ["Adventure", "Tournament"],
+        "production": "Warner Bros.",
+        "yearOfRelease": 2005
+    },
+    {
+        "id": "8",
+        "movieName": "Spider-Man: No Way Home",
+        "director": "Jon Watts",
+        "directorimg": "/Images/jon_watts.jpg",
+        "poster": "/public/images/spider.jpg",
+        "review": 
+        "Peter Parker faces his most challenging battle yet, as multiverse villains threaten his world, forcing him to confront his past and redefine his future.",
+        "duration": "2h 28m",
+        "rating": 4.8,
+        "genre": "Action",
+        "tags": ["Superhero", "Multiverse", "Adventure"],
+        "production": "Marvel Studios",
+        "yearOfRelease": 2021
+    },
+    {
+        "id": "9",
+        "movieName": "Inception",
+        "director": "Christopher Nolan",
+        "directorimg": "/Images/christopher_nolan.jpg",
+        "poster": "/public/images/movie9.jpg",
+        "review": 
+        "A mind-bending thriller where a group of thieves enters dreams to plant an idea, blurring the line between reality and illusion.",
+        "duration": "2h 28m",
+        "rating": 4.8,
+        "genre": "Thriller",
+        "tags": ["Sci-Fi", "Dreams", "Mind-Bending"],
+        "production": "Warner Bros.",
+        "yearOfRelease": 2010
+    },
+    {
+        "id": "10",
+        "movieName": "Saving Private Ryan",
+        "director": "Steven Spielberg",
+        "directorimg": "/Images/steven_spielberg.jpg",
+        "poster": "/public/images/movie10.jpg",
+        "review": 
+        "A gripping war epic following a squad of soldiers on a mission to rescue a paratrooper behind enemy lines during World War II.",
+        "duration": "2h 49m",
+        "rating": 4.9,
+        "genre": "War",
+        "tags": ["World War II", "Action", "Drama"],
+        "production": "DreamWorks",
+        "yearOfRelease": 1998
+    },
+    {
+        "id": "11",
+        "movieName": "Joker",
+        "director": "Todd Phillips",
+        "directorimg": "/Images/todd_phillips.jpg",
+        "poster": "/public/images/movie11.jpg",
+        "review": 
+        "A dark psychological thriller exploring the origin of the Joker, following Arthur Fleck’s descent into madness in Gotham City.",
+        "duration": "2h 2m",
+        "rating": 4.8,
+        "genre": "Thriller",
+        "tags": ["Psychological", "Crime", "Drama"],
+        "production": "Warner Bros.",
+        "yearOfRelease": 2019
+    },
+    {
+        "id": "12",
+        "movieName": "Dunkirk",
+        "director": "Christopher Nolan",
+        "directorimg": "/Images/christopher_nolan.jpg",
+        "poster": "/public/images/movie12.jpg",
+        "review": 
+        "A visually stunning war drama depicting the intense and heroic evacuation of Allied soldiers from Dunkirk during World War II.",
+        "duration": "1h 46m",
+        "rating": 4.7,
+        "genre": "War",
+        "tags": ["World War II", "Survival", "Historical"],
+        "production": "Warner Bros.",
+        "yearOfRelease": 2017
+    },
+    {
+        "id": "13",
+        "movieName": "The Hangover",
+        "director": "Todd Phillips",
+        "directorimg": "/Images/todd_phillips.jpg",
+        "poster": "/public/images/movie13.jpg",
+        "review": 
+        "A wild comedy about a bachelor party gone wrong in Las Vegas, leading to a chaotic search for the missing groom.",
+        "duration": "1h 40m",
+        "rating": 4.6,
+        "genre": "Comedy",
+        "tags": ["Buddy", "Crazy Night", "Vegas"],
+        "production": "Warner Bros.",
+        "yearOfRelease": 2009
+    }
+   
+]
