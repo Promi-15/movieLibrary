@@ -5,6 +5,7 @@ import PagesToRead from "./Pages/PagesToRead"
 import Login from "./Pages/Login"
 import Registration from "./Pages/Registration"
 import Navbar from "./Components/Navbar"
+import Description from "./Pages/Description"
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element= {<Home/>} />
         <Route path="/listedBooks" element= {<ListedBooks/>} />
         <Route path="/pagesToReload" element= {<PagesToRead/>} />
+        <Route path="/description/:id" element= {<Description/> }  />
         <Route path="/login" element= {<Login/>} />
         <Route path="/registration" element= {<Registration/>} />
         
