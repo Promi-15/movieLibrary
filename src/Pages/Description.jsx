@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import {  useParams } from "react-router-dom"
+import {  Link, useParams } from "react-router-dom"
 
 
-const Description = ({addToWatch}) => {
+const Description = ({addToWatch,addToWishList}) => {
  
   const { id } = useParams()
   const [movie, setMovie] = useState(null)
@@ -45,9 +45,13 @@ const Description = ({addToWatch}) => {
         <p>{movie.tags}</p>
         <p>Year of release : {movie.yearOfRelease}</p>
         <div className="flex gap-10 justify-between text-white font-bold">
-          <button className="w-full bg-gradient-to-bl from bg-red-950 to black p-2 rounded-2xl">Wish List </button>
+          <button className="w-full bg-gradient-to-bl from bg-red-950 to black p-2 rounded-2xl" onClick={() => addToWishList(movie)}>Wish List </button>
           <button className="w-full bg-gradient-to-bl from bg-red-950 to black p-2 rounded-2xl" onClick={() => addToWatch(movie)}>Watched </button>
         </div>
+       
+        <Link to="/">
+        <button className="w-full text-white bg-gradient-to-bl from bg-red-950 to black p-2 rounded-2xl ">Back</button>
+        </Link>
       </div>
     </div>
   )
