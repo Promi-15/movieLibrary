@@ -8,7 +8,7 @@ const Navbar = () => {
         } to="/">Home</NavLink> </li>
       <li className="text-white font-light "><NavLink className={({ isActive }) =>
           isActive ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-light"
-        } to="/listedBooks">Listed Books</NavLink> </li>
+        } to="/listedBooks">Lists of  movies</NavLink> </li>
       <li className="text-white font-light "><NavLink className={({ isActive }) =>
           isActive ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-light"
         } to="/pagesToRead">Pages TO Load</NavLink></li>

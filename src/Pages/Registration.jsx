@@ -23,7 +23,7 @@ const Registration = () => {
               <input
                 type="text"
                 id="firstName"
-                className="p-2 rounded-3xl bg-gray-400"
+                className="px-10 py-2 rounded-3xl bg-gray-400"
                 placeholder="Enter first name"
               />
             </div>
@@ -34,13 +34,13 @@ const Registration = () => {
               <input
                 type="text"
                 id="lastName"
-                className="p-2 rounded-3xl bg-gray-400"
+                className="py-2 px-10 rounded-3xl bg-gray-400"
                 placeholder="Enter last name"
               />
             </div>
           </div>
 
-          <div className="flex flex-col text-left relative">
+          <div className="flex flex-col text-left relative items-center">
             <label htmlFor="password" className="text-white mb-1">
               Password
             </label>
@@ -51,7 +51,7 @@ const Registration = () => {
               placeholder="Enter password"
             />
             <p
-              className="absolute inset-y-0 right-3 flex items-center text-xl text-red-950 cursor-pointer"
+              className="absolute mt-10 right-3 flex items-center text-xl text-red-950 cursor-pointer"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? <FaRegSadCry /> : <PiSmileyDuotone />}

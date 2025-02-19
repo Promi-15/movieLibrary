@@ -1,5 +1,6 @@
 import Banner from "../Components/Banner"
 import FetchMovies from "../Components/FetchMovies"
+import MovieBanner from "../Components/MovieBanner"
 
 
 const Home = () => {
@@ -7,7 +8,8 @@ const Home = () => {
     
     <div >
       <Banner />
-      <FetchMovies/>
+      <FetchMovies />
+      <MovieBanner/>
      </div>
     
   )
