@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "aos/dist/aos.css";
 
 const MovieCard = ({ movie }) => {
   const {
@@ -15,20 +16,11 @@ const MovieCard = ({ movie }) => {
     production,
     yearOfRelease,
   } = movie;
+
+  
   return (
-    //linear-gradient(to left, rgba(35, 13, 13, 0.8), transparent), 
-  //   <div
-  //   className="h-[450px] rounded-2xl"
-  //   style={{
-  //     backgroundImage: `url(${poster})`,
-  //     backgroundSize: "contain",
-  //     backgroundPosition: "center",
-  //     backgroundRepeat: "no-repeat",
-  //   }}
-  //     >
-    
-  // </div>
-    <div className="flex  relative bg-black h-[260px] rounded-2xl hover:-translate-x-2 hover:translate-y-2.5  hover:shadow-[10px_10px_20px_rgba(0,0,0,2)]">
+   
+    <div className="flex  relative bg-black h-[260px] rounded-2xl hover:-translate-x-2 hover:translate-y-2.5  hover:shadow-[10px_10px_20px_rgba(0,0,0,2)]" >
       <img src={poster} alt="" className="object-cover w-3/4 absolute inset-0 bg-gradient-to-r h-full from-black/80 to-transparent left-0 rounded-2xl opacity-55" />
       <div className="w-1/2  absolute h-full right-0 bg-gradient-to-l from-black via-black/80 to-transparent z-20 rounded-2xl ">
         <h1 className="lg:text-2xl font-bold text-white  mt-10">{movieName}</h1>

@@ -4,7 +4,7 @@ const ListedMovies = ({ watchMovies, wishList }) => {
   return (
     <div>
       <div>
-        <p className="text-center  italic text-4xl font-bold">Watched Movies</p>
+        <p className="text-center  italic text-4xl font-bold my-10">Watched Movies</p>
 
         {watchMovies.map((movie) => (
           <div
@@ -34,7 +34,7 @@ const ListedMovies = ({ watchMovies, wishList }) => {
         ))}
       </div>
       <div>
-      <p className="text-center  italic text-4xl font-bold">Wish Lists</p>
+      <p className="text-center  italic text-4xl font-bold my-10">Wish Lists</p>
         {wishList.map((movie) => (
           <div
             key={movie.id}

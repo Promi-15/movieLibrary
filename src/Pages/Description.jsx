@@ -12,8 +12,11 @@ const Description = ({addToWatch,addToWishList}) => {
       .then((movies) => {
         const foundMovie = movies.find((m) => m.id.toString() === id); // Ensure ID type matches (e.g. string)
         setMovie(foundMovie || null);
-    })
-  }, [id])
+      })
+  }, [id]);
+
+  
+
   if (!movie) {
     return <h2>Loading...</h2>; // Optionally show loading until movie is fetched
   }

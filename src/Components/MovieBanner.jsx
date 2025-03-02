@@ -2,7 +2,7 @@
 
 const MovieBanner = () => {
   return (
-    <div className="">
+    <div className="my-20">
     <div
       className="hero h-80 mt-5  rounded-xl"
       style={{

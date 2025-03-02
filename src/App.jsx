@@ -23,12 +23,21 @@ const App = () => {
   };
 
   const addToWishList = (movie) => {
-    setWishList((prev) => [...prev, movie]);
+    const isMovieWatched = watchMovies.find((mv) => mv.id === movie.id);
+    if (isMovieWatched) {
+      Swal.fire({
+        title: " Already Watched",
+        icon: "error",
+        draggable: true
+      });
+    } else {
+      setWishList((prev) => [...prev, movie]);
     Swal.fire({
       title: "Successfully added to wish lists",
       icon: "success",
       draggable: true
     });
+    }
   }
 
   return (

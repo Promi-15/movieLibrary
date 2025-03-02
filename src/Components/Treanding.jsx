@@ -28,10 +28,10 @@ const Treanding = () => {
       pagination={true}
         modules={[EffectCoverflow, Pagination,Autoplay]}
         autoplay={{ delay: 3000, disableOnInteraction: false }} 
-      className="mySwiper lg:h-[500px] lg:w-[900px] "
+      className="mySwiper  lg:w-[900px] "
     >
       <SwiperSlide>
-        <img src="https://i.ibb.co.com/XfQwmP0h/8881287.jpg" />
+        <img  src="https://i.ibb.co.com/XfQwmP0h/8881287.jpg" />
       </SwiperSlide>
       <SwiperSlide>
         <img src="https://i.ibb.co.com/Z6MPDYgz/1805487.jpg" />
