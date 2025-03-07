@@ -11,7 +11,10 @@ const Navbar = () => {
         } to="/listedBooks">Lists of  movies</NavLink> </li>
       <li className="text-white font-light "><NavLink className={({ isActive }) =>
           isActive ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-light"
-        } to="/pagesToRead">Pages TO Load</NavLink></li>
+        } to="/pagesToReload">Pages TO Load</NavLink></li>
+      <li className="text-white font-light "><NavLink className={({ isActive }) =>
+          isActive ? "text-blue-500 font-bold border-b-2 border-blue-500" : "text-light"
+        } to="/downloads">Download</NavLink></li>
     </>
   );
   return (

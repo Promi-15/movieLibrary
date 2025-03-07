@@ -1,20 +1,44 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home"
-import ListedBooks from "./Pages/ListedMovies"
-import PagesToRead from "./Pages/PagesToRead"
+// import ListedBooks from "./Pages/ListedMovies"
+// import PagesToRead from "./Pages/PagesToReload"
 import Login from "./Pages/Login"
 import Registration from "./Pages/Registration"
 import Navbar from "./Components/Navbar"
 import Description from "./Pages/Description"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Swal from "sweetalert2"
 import ListedMovies from "./Pages/ListedMovies"
+import PagesToReload from "./Pages/PagesToReload"
+import Downloads from "./Pages/Downloads"
 
 const App = () => {
-  const [watchMovies, setToWatchMovie] = useState([]);
-  const [wishList, setWishList] = useState([]);
+  const [watchMovies, setToWatchMovie] = useState(JSON.parse(localStorage.getItem("watchMovies")) || []);
+  const [wishList, setWishList] = useState(JSON.parse(localStorage.getItem("wishList")) || []);
+
+  const [downloads, setDownloads] = useState(JSON.parse(localStorage.getItem("downloads")) ||[])
+  
+  useEffect(() => {
+    localStorage.setItem("watchMovies", JSON.stringify(watchMovies));
+  }, [watchMovies]);
+
+  useEffect(() => {
+    localStorage.setItem("wishList", JSON.stringify(wishList));
+  }, [wishList]);
+  useEffect(() => {
+    localStorage.setItem("downloads", JSON.stringify(downloads));
+  }, [downloads]);
+
+
+
   const addToWatch = (movie) => {
-    setToWatchMovie((prev) => [...prev, movie]);
+    setToWatchMovie((prev) => {
+      const updatedList = [...prev, movie];
+     
+      // updatedLocalStorage();
+      return updatedList;
+    });
+    
     Swal.fire({
       title: "Successfully added to watched lists",
       icon: "success",
@@ -31,7 +55,12 @@ const App = () => {
         draggable: true
       });
     } else {
-      setWishList((prev) => [...prev, movie]);
+      setWishList((prev) => {
+        const updatedList = [...prev, movie];
+        // updatedLocalStorage();
+        return updatedList;
+      });
+      //local.setItem
     Swal.fire({
       title: "Successfully added to wish lists",
       icon: "success",
@@ -39,6 +68,18 @@ const App = () => {
     });
     }
   }
+  const addToDownLoad = (movie) => {
+    setDownloads((prev) => {
+      const update = [...prev, movie]
+      return update;
+    })
+    Swal.fire({
+      title: "Successfully added to Download",
+      icon: "success",
+      draggable: true
+    });
+ }
+
 
   return (
     <div className="  mt-2  rounded-2xl ">
@@ -46,11 +87,12 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path="/" element= {<Home/>} />
-          <Route path="/listedBooks" element={<ListedMovies watchMovies={ watchMovies} wishList={wishList} />} />
-        <Route path="/pagesToReload" element= {<PagesToRead/>} />
-          <Route path="/description/:id" element={<Description addToWatch={ addToWatch} addToWishList={addToWishList} />  }  />
+          <Route path="/listedBooks" element={<ListedMovies watchMovies={watchMovies} wishList={wishList} />} />
+        <Route path="/pagesToReload" element= {<PagesToReload/>} />
+          <Route path="/description/:id" element={<Description addToWatch={ addToWatch} addToWishList={addToWishList}  addToDownLoad={addToDownLoad}/>  }  />
         <Route path="/login" element= {<Login/>} />
-        <Route path="/registration" element= {<Registration/>} />
+          <Route path="/registration" element={<Registration />} />
+          <Route path="/downloads" element={<Downloads downloads={downloads}/>}></Route>
         
       </Routes>
     </BrowserRouter>

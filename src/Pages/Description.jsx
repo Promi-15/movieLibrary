@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import {  Link, useParams } from "react-router-dom"
 
 
-const Description = ({addToWatch,addToWishList}) => {
+const Description = ({addToWatch,addToWishList,addToDownLoad}) => {
  
   const { id } = useParams()
   const [movie, setMovie] = useState(null)
@@ -50,6 +50,7 @@ const Description = ({addToWatch,addToWishList}) => {
         <div className="flex gap-10 justify-between text-white font-bold">
           <button className="w-full bg-gradient-to-bl from bg-red-950 to black p-2 rounded-2xl" onClick={() => addToWishList(movie)}>Wish List </button>
           <button className="w-full bg-gradient-to-bl from bg-red-950 to black p-2 rounded-2xl" onClick={() => addToWatch(movie)}>Watched </button>
+          <button className="w-full bg-gradient-to-bl from bg-red-950 to black p-2 rounded-2xl" onClick={()=> addToDownLoad(movie)}>Download</button>
         </div>
        
         <Link to="/">

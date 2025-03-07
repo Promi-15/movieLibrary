@@ -9,7 +9,7 @@ const ListedMovies = ({ watchMovies, wishList }) => {
         {watchMovies.map((movie) => (
           <div
             key={movie.id}
-            className="flex justify-around border-2 p-4 max-w-7xl mx-auto"
+            className="flex justify-around border-2 p-4 max-w-7xl mx-auto items-center"
           >
             <div>
               <img src={movie.poster} alt="" className="w-32 " />
@@ -30,6 +30,7 @@ const ListedMovies = ({ watchMovies, wishList }) => {
                 <p>rating : {movie.rating}</p>
               </div>
             </div>
+           
           </div>
         ))}
       </div>

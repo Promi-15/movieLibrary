@@ -1,8 +1,23 @@
+import { signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider } from "firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import auth from "../../Firebase/firebase";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const provider = new GoogleAuthProvider();
+  const handleGoogleSignIn = () => {
+    // console.log("google");
+    signInWithPopup(auth, provider)
+      .then((result) => {
+      console.log(result)
+      })
+      .catch((error) => {
+      console.log("error" ,error)
+    })
+  }
   return (
     <div className="bg-gradient-to-l from bg-red-950 to to-black min-h-screen ">
       <div>
@@ -59,6 +74,7 @@ const Login = () => {
             <Link to={"/registration"}>Register</Link>
           </span>
         </p>
+        <p className="btn text-center w-full" onClick={handleGoogleSignIn}>Login With <span><FaGoogle /></span></p>
       </div>
     </div>
   );
