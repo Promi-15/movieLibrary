@@ -15,7 +15,7 @@ const Registration = () => {
       </div>
       <div className="p-5 lg:p-20 my-5 border-2 rounded-tl-4xl h-full w-full bg-clip-padding backdrop-filter backdrop-blur-lg opacity-90 border-gray-100 max-w-2xl mx-auto space-y-5 bg-white/10">
         <div className="text-center flex flex-col space-y-5">
-          <div className="flex justify-evenly gap-3">
+          <div className="flex flex-col lg:flex-row justify-evenly gap-3">
             <div className="flex flex-col text-left">
               <label htmlFor="firstName" className="text-white mb-1">
                 First Name

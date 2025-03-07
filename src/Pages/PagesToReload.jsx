@@ -1,5 +1,8 @@
 // import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
+// import { useState } from 'react';
+import {  XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
+import Clock from '../Components/Clock';
+// import Clock from '../Components/Clock.jsx';
 // import React, { PureComponent } from 'react';
 // import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
@@ -58,7 +61,8 @@ const PagesToReload = () => {
         {/* <Bar dataKey="duration" barSize={20} fill="#82ca9d" name="Duration (min)" /> */}
         
       </LineChart>
-    </ResponsiveContainer>
+      </ResponsiveContainer>
+      <Clock className=""/>
   </div>
   )
 }
