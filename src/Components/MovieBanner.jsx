@@ -17,7 +17,7 @@ const MovieBanner = () => {
            STREAMING NOW
           </p>
           <p className="mb-5"></p>
-          <button className=" btn-dash text-2xl italic">Let's Explore Something New</button>
+          <button className=" btn-dash text-2xl italic">Lets Explore Something New</button>
         </div>
       </div>
     </div>

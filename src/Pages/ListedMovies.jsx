@@ -1,6 +1,6 @@
-// import MovieCard from "../Components/MovieCard"
 
 const ListedMovies = ({ watchMovies, wishList }) => {
+
   return (
     <div>
       <div>
