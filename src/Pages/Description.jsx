@@ -7,7 +7,7 @@ const Description = ({addToWatch,addToWishList,addToDownLoad}) => {
   const { id } = useParams()
   const [movie, setMovie] = useState(null)
   useEffect(() => {
-    fetch("/public/movies.json")
+    fetch("movies.json")
       .then((res) => (res.json()))
       .then((movies) => {
         const foundMovie = movies.find((m) => m.id.toString() === id); // Ensure ID type matches (e.g. string)

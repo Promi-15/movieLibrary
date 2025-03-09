@@ -6,7 +6,7 @@ const FetchMovies = () => {
   const [movies, setMovies] = useState([]);
   const [showAll, setShowAll] = useState(false);
   useEffect(() => {
-    fetch("/public/movies.json")
+    fetch("movies.json")
       .then((res) => res.json())
       .then((data) => setMovies(data));
   }, []);

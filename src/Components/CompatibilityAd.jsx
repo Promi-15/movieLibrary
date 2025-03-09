@@ -3,7 +3,7 @@ import { FaApple } from "react-icons/fa";
 import { RiNetflixFill } from "react-icons/ri";
 import { FaWindows } from "react-icons/fa";
 import { RiMacbookFill } from "react-icons/ri";
-import johnWickImage from "../assets/images/jhonWk.png"
+import johnWickImage from "/images/jhonWk.png"
   ;
 const CompatibilityAd = () => {
   return (

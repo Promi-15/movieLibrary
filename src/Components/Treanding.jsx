@@ -22,7 +22,7 @@ const Treanding = () => {
         {
           ['inception', 'baymax', 'openhimer', 'parasite', 'spider'].map((movie, index) => (
             <SwiperSlide key={index} >
-              <img src={`/src/assets/images/${movie}.jpg`} className='lg:w-full lg:h-full object-cover'>
+              <img src={`/images/${movie}.jpg`} className='lg:w-full lg:h-full object-cover'>
               </img>
             </SwiperSlide>
           ))
