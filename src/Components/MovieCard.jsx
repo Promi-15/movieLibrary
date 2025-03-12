@@ -7,7 +7,7 @@ const MovieCard = ({ movie }) => {
     id,
     poster,
     director,
-    directorimg,
+    directorImg,
     review,
     duration,
     rating,

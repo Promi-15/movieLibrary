@@ -79,7 +79,59 @@ const App = () => {
       draggable: true
     });
  }
+  const deleteFromWatchedMovies = (movieId) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
 
+        const updatedMovies = watchMovies.filter((movie) => movie.id !== movieId)
+    
+    setToWatchMovie(updatedMovies)
+    localStorage.setItem("watchedMovies", JSON.stringify(updatedMovies))
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success"
+        });
+      }
+    });
+    
+    
+  }
+  
+  const deleteFromWishListMovies = (movieId) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+
+        const updatedMovies = wishList.filter((movie) => movie.id !== movieId)
+    
+    setWishList(updatedMovies)
+    localStorage.setItem("wishList", JSON.stringify(updatedMovies))
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success"
+        });
+      }
+    });
+    
+    
+}
 
   return (
     <div className="  mt-2  rounded-2xl ">
@@ -87,7 +139,7 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path="/" element= {<Home/>} />
-          <Route path="/listedBooks" element={<ListedMovies watchMovies={watchMovies} wishList={wishList} />} />
+          <Route path="/listedBooks" element={<ListedMovies watchMovies={watchMovies} wishList={wishList} deleteFromWatchedMovies={deleteFromWatchedMovies} deleteFromWishListMovies={ deleteFromWishListMovies} />} />
         <Route path="/pagesToReload" element= {<PagesToReload/>} />
           <Route path="/description/:id" element={<Description addToWatch={ addToWatch} addToWishList={addToWishList}  addToDownLoad={addToDownLoad}/>  }  />
         <Route path="/login" element= {<Login/>} />

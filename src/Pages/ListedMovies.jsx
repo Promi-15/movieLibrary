@@ -1,5 +1,5 @@
 
-const ListedMovies = ({ watchMovies, wishList }) => {
+const ListedMovies = ({ watchMovies, wishList ,deleteFromWatchedMovies,deleteFromWishListMovies}) => {
 
   return (
     <div>
@@ -30,7 +30,9 @@ const ListedMovies = ({ watchMovies, wishList }) => {
                 <p>rating : {movie.rating}</p>
               </div>
             </div>
-           
+            <div>
+              <button className="btn" onClick={()=>deleteFromWatchedMovies(movie.id)}>Delete</button>
+           </div>
           </div>
         ))}
       </div>
@@ -59,6 +61,9 @@ const ListedMovies = ({ watchMovies, wishList }) => {
               <div>
                 <p>rating : {movie.rating}</p>
               </div>
+            </div>
+            <div>
+              <button className="btn" onClick={() => deleteFromWishListMovies(movie.id)}>Delete</button>
             </div>
           </div>
         ))}

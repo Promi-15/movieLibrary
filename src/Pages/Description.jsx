@@ -2,12 +2,13 @@ import { useEffect, useState } from "react"
 import {  Link, useParams } from "react-router-dom"
 
 
-const Description = ({addToWatch,addToWishList,addToDownLoad}) => {
+const Description = ({ addToWatch, addToWishList, addToDownLoad }) => {
+  
  
   const { id } = useParams()
   const [movie, setMovie] = useState(null)
   useEffect(() => {
-    fetch("movies.json")
+    fetch("/movies.json")
       .then((res) => (res.json()))
       .then((movies) => {
         const foundMovie = movies.find((m) => m.id.toString() === id); // Ensure ID type matches (e.g. string)
@@ -38,14 +39,14 @@ const Description = ({addToWatch,addToWishList,addToDownLoad}) => {
       </div>
       <div className="border-2 border-gray-600 max-w-7xl mx-auto rounded-2xl p-10 my-10 text-center space-y-3">
         <div className="flex justify-around items-center"> 
-        <img className="w-24 text-center rounded-full" src={movie.directorimg} alt="" />
+        <img className="w-24 text-center rounded-full" src={movie.directorImg} alt="" />
        
         </div>
         <p className="text-2xl font-bold">Director : <span className="font-medium text-xl">{movie.director}</span> </p>
         <p>Production : { movie.production}</p>
        
         <p>Review : {movie.review}</p>
-        <p>{movie.tags}</p>
+        <p>{movie.tags} </p>
         <p>Year of release : {movie.yearOfRelease}</p>
         <div className="flex gap-10 justify-between text-white font-bold">
           <button className="w-full bg-gradient-to-bl from bg-red-950 to black p-2 rounded-2xl" onClick={() => addToWishList(movie)}>Wish List </button>
