@@ -30,7 +30,7 @@ const MovieCard = ({ movie }) => {
           <p>{genre }</p>
         </div>
         <div className="flex gap-5 items-center  absolute bottom-2 p-2">
-          <Link to={`description/${id}`}>
+          <Link to={`/description/${id}`}>
           <p className="px-5 lg:px-7 py-1 lg:py-2 w-full text-center font-extralight text-sm   text-white  bg-red-950 rounded-2xl ">Watch Trailer</p>
           </Link>
           <div className="flex items-center gap-2">

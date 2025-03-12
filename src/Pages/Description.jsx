@@ -16,7 +16,7 @@ const Description = ({addToWatch,addToWishList,addToDownLoad}) => {
   }, [id]);
 
   
-
+   
   if (!movie) {
     return <h2>Loading...</h2>; // Optionally show loading until movie is fetched
   }
